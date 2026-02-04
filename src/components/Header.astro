@@ -9,13 +9,13 @@ const links = [
 ---
 
 <header class="border-b border-zinc-800/60 bg-[#0B0B10]/80 backdrop-blur">
-  <nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-8 lg:px-20">
-    <a href="/" class="font-semibold tracking-tight text-zinc-50">
+  <nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-8 lg:px-20 ">
+    <a href="/" class="font-semibold tracking-tight text-zinc-50 ">
       Pibadevs
     </a>
     <div class="flex items-center gap-6 text-sm text-zinc-200">
       {links.map((link) => (
-        <a href={link.href} class="hover:text-(--color-primary) transition-colors">
+        <a href={link.href} class="hover:text-primary transition-colors">
           {link.label}
         </a>
       ))}

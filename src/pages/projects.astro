@@ -23,11 +23,11 @@ const projects = [
   description="Proyectos reales desarrollados por Pibadevs para PYMES y negocios en crecimiento."
 >
   <Section title="Proyectos destacados" eyebrow="Projects">
-    <div class="grid gap-4 md:grid-cols-2">
+    <div class="grid gap-4 md:grid-cols-2 ">
       {projects.map((project) => (
         <a
           href={`/projects/${project.slug}`}
-          class="group flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 hover:border-(--color-primary) hover:bg-zinc-900/70 transition-colors"
+          class="group flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 hover:border-primary hover:bg-zinc-900/70 transition-colors"
         >
           <div class="relative aspect-video overflow-hidden">
             <img
@@ -43,7 +43,7 @@ const projects = [
               <h2 class="text-sm font-semibold text-zinc-50">
                 {project.title}
               </h2>
-              <p class="mt-1 text-[11px] uppercase tracking-[0.18em] text-(--color-tertiary)">
+              <p class="mt-1 text-[11px] uppercase tracking-[0.18em] text-tertiary">
                 {project.role}
               </p>
             </div>
@@ -57,7 +57,7 @@ const projects = [
                 </span>
               ))}
             </div>
-            <span class="mt-2 text-[11px] font-medium text-(--color-primary)">
+            <span class="mt-2 text-[11px] font-medium hover:text-primary">
               Ver detalles del proyecto →
             </span>
           </div>

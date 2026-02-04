@@ -9,7 +9,7 @@
   --color-secondary: #60a5fa; /* blue-400 */
   --color-tertiary: #f87171;  /* custom vibrant red */
   --color-quaternary: #56070C;  /* custom vibrant red */
-  --color-quaternary: #1F0204;  /* custom vibrant red */
+  --color-quinary: #1F0204;  /* custom vibrant red */
 }
 
 /* estilos extra */
@@ -31,7 +31,6 @@ body {
   overflow: hidden;
 }
 
-/* Borde “glow” rojo siempre visible */
 .tech-pill::before {
   content: "";
   position: absolute;
@@ -43,10 +42,9 @@ body {
     rgba(248, 113, 113, 0.7),
     rgba(248, 113, 113, 0.15)
   );
-  opacity: 1; /* <— siempre visible */
+  opacity: 1;
 }
 
-/* Haz de luz en movimiento siempre activo */
 .tech-pill::after {
   content: "";
   position: absolute;
@@ -60,58 +58,7 @@ body {
   );
   transform: translateX(-120%);
   animation: tech-shine 2.4s linear infinite;
-  opacity: 1; /* <— siempre visible */
-}
-
-.tech-pill-inner {
-  position: relative;
-  z-index: 10;
-}
-
-@keyframes tech-shine {
-  0% {
-    transform: translateX(-120%);
-  }
-  100% {
-    transform: translateX(140%);
-  }
-}
-
-.tech-pill {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Borde “glow” rojo siempre visible */
-.tech-pill::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: 9999px;
-  background: linear-gradient(
-    120deg,
-    rgba(248, 113, 113, 0.15),
-    rgba(248, 113, 113, 0.7),
-    rgba(248, 113, 113, 0.15)
-  );
-  opacity: 1; /* <— siempre visible */
-}
-
-/* Haz de luz en movimiento siempre activo */
-.tech-pill::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 9999px;
-  background: linear-gradient(
-    110deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.28) 45%,
-    rgba(255, 255, 255, 0) 70%
-  );
-  transform: translateX(-120%);
-  animation: tech-shine 2.4s linear infinite;
-  opacity: 1; /* <— siempre visible */
+  opacity: 1;
 }
 
 .tech-pill-inner {
