@@ -46,6 +46,7 @@ body {
 }
 
 .tech-pill::after {
+  mix-blend-mode: screen;
   content: "";
   position: absolute;
   inset: 0;

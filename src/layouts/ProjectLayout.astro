@@ -53,30 +53,34 @@ const {
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   <Section title={heroTitle} eyebrow={eyebrow}>
-    <div class="grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start">
+    <div
+      class="grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start"
+    >
       <div class="space-y-4 text-sm text-zinc-300">
         <p>{heroIntro}</p>
         <p>{heroBody}</p>
 
         <div class="grid gap-3 md:grid-cols-2 text-xs">
-          {heroLeftBlocks.map((block) => (
-            <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
-              <h3 class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
-                {block.title}
-              </h3>
-              <p class="text-zinc-300">{block.body}</p>
-            </div>
-          ))}
+          {
+            heroLeftBlocks.map((block) => (
+              <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
+                <h3 class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
+                  {block.title}
+                </h3>
+                <p class="text-zinc-300">{block.body}</p>
+              </div>
+            ))
+          }
         </div>
       </div>
 
-      <aside class="space-y-4 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4 text-sm text-zinc-300">
+      <aside
+        class="space-y-4 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4 text-sm text-zinc-300"
+      >
         <div>
           <h2 class="text-sm font-semibold text-zinc-50">{scopeTitle}</h2>
           <ul class="mt-2 space-y-2 text-xs text-zinc-400">
-            {scopeItems.map((item) => (
-              <li>• {item}</li>
-            ))}
+            {scopeItems.map((item) => <li>• {item}</li>)}
           </ul>
         </div>
 
@@ -91,35 +95,41 @@ const {
 
   <Section title={featuresTitle} eyebrow="Características">
     <div class="grid gap-4 md:grid-cols-3 text-xs text-zinc-300">
-      {features.map((feature) => (
-        <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
-          <h3 class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
-            {feature.title}
-          </h3>
-          <p>{feature.body}</p>
-        </div>
-      ))}
+      {
+        features.map((feature) => (
+          <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
+            <h3 class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[color:var(--color-primary)]">
+              {feature.title}
+            </h3>
+            <p>{feature.body}</p>
+          </div>
+        ))
+      }
     </div>
   </Section>
 
   <Section title="Tecnologías usadas" eyebrow="Stack">
     <div class="flex flex-wrap gap-2 text-[11px] text-zinc-100">
-      {tech.map((t) => (
-        <span class="tech-pill rounded-full bg-zinc-900 px-px py-[1px]">
-          <span class="tech-pill-inner flex items-center rounded-full bg-zinc-900 px-3 py-1 uppercase tracking-[0.18em]">
-            {t}
+      {
+        tech.map((t) => (
+          <span class="tech-pill rounded-full px-px py-[1px]">
+            <span class="tech-pill-inner flex items-center rounded-full bg-zinc-900/80 px-3 py-1 uppercase tracking-[0.18em]">
+              {t}
+            </span>
           </span>
-        </span>
-      ))}
+        ))
+      }
     </div>
   </Section>
 
   <Section title={ctaTitle} eyebrow={ctaEyebrow}>
-    <div class="flex flex-wrap items-center justify-between gap-3 text-sm text-zinc-300">
+    <div
+      class="flex flex-wrap items-center justify-between gap-3 text-sm text-zinc-300"
+    >
       <p>{ctaBody}</p>
       <a
         href={ctaHref}
-        class="rounded-full bg-[color:var(--color-primary)] px-4 py-2 text-xs font-medium text-black hover:bg-[color:var(--color-primary)]/80 transition-colors"
+          class="rounded-full border border-zinc-700 px-4 py-2 text-xs font-medium text-white hover:border-primary transition-colors"
       >
         {ctaLabel}
       </a>
