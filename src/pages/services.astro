@@ -1,0 +1,143 @@
+---
+// src/pages/services.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+
+const services = [
+  {
+    title: "Desarrollo web a medida",
+    description:
+      "Aplicaciones web diseñadas específicamente para tu operación: ventas, inventarios, reservas, atención al cliente y más.",
+    bullets: [
+      "Portales internos y externos conectados a bases de datos",
+      "Accesos por rol y permisos a medida",
+      "Interfaces pensadas para uso diario, no solo para demos",
+    ],
+  },
+  {
+    title: "Sistemas internos empresariales",
+    description:
+      "Reemplazamos planillas y procesos manuales por un sistema único donde tu equipo pueda trabajar en orden.",
+    bullets: [
+      "Gestión de clientes, órdenes de trabajo y proyectos",
+      "Historial y trazabilidad de cada movimiento",
+      "Alertas para que nada se pierda en el camino",
+    ],
+  },
+  {
+    title: "Dashboards y reportes",
+    description:
+      "Métricas claras para entender cómo está tu negocio sin perder tiempo armando reportes a mano.",
+    bullets: [
+      "Indicadores de ventas, operaciones y capacidad",
+      "Reportes descargables en Excel y PDF",
+      "Visualizaciones simples que cualquiera puede leer",
+    ],
+  },
+  {
+    title: "Automatización de procesos",
+    description:
+      "Reducimos tareas repetitivas y recordatorios manuales con flujos automáticos.",
+    bullets: [
+      "Notificaciones por email o WhatsApp Business",
+      "Recordatorios de vencimientos y tareas pendientes",
+      "Actualización automática de estados y tableros",
+    ],
+  },
+  {
+    title: "Integraciones",
+    description:
+      "Conectamos tu sistema con herramientas que ya usas para evitar doble trabajo y errores.",
+    bullets: [
+      "Pasarelas de pago y facturación",
+      "APIs de terceros y servicios externos",
+      "Conexión con sistemas internos existentes",
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Services · PibaDevs"
+  description="Servicios de desarrollo de software a medida para PYMES, emprendedores y startups."
+>
+  <Section title="Servicios de PibaDevs" eyebrow="Services">
+    <div class="max-w-2xl space-y-3 text-sm text-zinc-300">
+      <p>
+        No vendemos paquetes cerrados ni licencias genéricas. Cada servicio se adapta a la realidad
+        de tu empresa, a tus procesos actuales y a los recursos que tienes disponibles.
+      </p>
+      <p>
+        El objetivo es que tu equipo tenga una herramienta propia, simple de usar y sostenible en el
+        tiempo.
+      </p>
+    </div>
+  </Section>
+
+  <Section title="Qué podemos construir contigo">
+    <div class="grid gap-4 md:grid-cols-2">
+      {services.map((service) => (
+        <article class="flex flex-col gap-2 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4 text-sm text-zinc-300">
+          <div>
+            <h2 class="text-sm font-semibold text-zinc-50">{service.title}</h2>
+            <p class="mt-1 text-xs text-zinc-400">{service.description}</p>
+          </div>
+          <ul class="mt-2 space-y-1 text-xs text-zinc-300">
+            {service.bullets.map((item) => (
+              <li>• {item}</li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </Section>
+
+  <Section title="¿Es PibaDevs una buena opción para tu empresa?" eyebrow="Clientes ideales">
+    <div class="grid gap-4 md:grid-cols-3 text-sm text-zinc-300">
+      <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
+        <h3 class="mb-1 text-sm font-semibold text-zinc-50">PYMES</h3>
+        <p>
+          Empresas que hoy operan con Excel, WhatsApp o herramientas sueltas y necesitan ordenar su
+          información y procesos.
+        </p>
+      </div>
+      <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
+        <h3 class="mb-1 text-sm font-semibold text-zinc-50">Emprendedores</h3>
+        <p>
+          Negocios que necesitan un sistema propio para profesionalizar su operación y diferenciarse
+          de la competencia.
+        </p>
+      </div>
+      <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
+        <h3 class="mb-1 text-sm font-semibold text-zinc-50">Startups tempranas</h3>
+        <p>
+          Equipos que buscan un MVP sólido, listo para validar mercado y crecer sin rehacer todo a los
+          pocos meses.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Hablemos de tu caso" eyebrow="Próximo paso">
+    <div class="flex flex-col gap-3 text-sm text-zinc-300 md:flex-row md:items-center md:justify-between">
+      <p>
+        Cuéntanos cómo está funcionando hoy tu operación y qué te gustaría mejorar. A partir de ahí,
+        podemos pensar juntos la primera versión de tu sistema.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <a
+          href="/projects"
+          class="rounded-full border border-zinc-700 px-4 py-2 text-xs font-medium text-zinc-100 hover:border-(--color-primary) hover:text-(--color-tertiary)  transition-colors"
+        >
+          Ver proyectos
+        </a>
+        <a
+          href="/contact"
+          class="rounded-full border border-zinc-700 px-4 py-2 text-xs font-medium text-zinc-100 hover:border-(--color-primary) hover:text-(--color-tertiary) transition-colors"
+        >
+          Hablemos
+        </a>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

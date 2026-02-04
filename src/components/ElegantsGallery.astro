@@ -1,0 +1,119 @@
+---
+const screenshots = [
+  {
+    src: "/images/elegants1.jpg",
+    alt: "Pantalla de inicio de sesión del sistema Elegants",
+    caption:
+      "Pantalla de acceso simple, limpia y centrada en la acción principal: entrar al sistema.",
+  },
+  {
+    src: "/images/elegants2.jpg",
+    alt: "Dashboard del sistema Elegants con tarjetas, gráficos y métricas",
+    caption:
+      "Dashboard con métricas clave, tarjetas de resumen y gráficos para entender el rendimiento del negocio.",
+  },
+  
+  // nuevas capturas
+  {
+    src: "/images/elegants4.jpg",
+    alt: "Formulario de registro de venta en Elegants",
+    caption:
+      "Flujo de venta con selección de productos, cantidades, tipo de pago y manejo de abonos a crédito.",
+  },
+  {
+    src: "/images/elegants5.jpg",
+    alt: "Historial de movimientos de inventario en Elegants",
+    caption:
+      "Historial de entradas y salidas de inventario con filtros por fecha, producto y tipo de movimiento.",
+  },
+  
+];
+
+---
+
+<div class="space-y-4 hover:">
+  <div class="grid gap-4 md:grid-cols-3">
+    {screenshots.map((shot, index) => (
+      <figure
+        class="flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 cursor-pointer"
+        data-index={index}
+      >
+        <div class="relative aspect-video overflow-hidden">
+          <img
+            src={shot.src}
+            alt={shot.alt}
+            loading="lazy"
+            class="h-full w-full object-cover"
+          />
+        </div>
+        <figcaption class="px-4 py-3 text-[11px] text-zinc-400">
+          {shot.caption}
+        </figcaption>
+      </figure>
+    ))}
+  </div>
+
+  <div
+    id="elegants-lightbox"
+    class="fixed inset-0 z-40 hidden items-center justify-center bg-black/80 px-4 py-8"
+  >
+    <button
+      id="elegants-lightbox-close"
+      class="absolute right-4 top-4 rounded-full bg-zinc-900/80 px-3 py-1 text-[11px] text-zinc-100 hover:bg-zinc-800"
+    >
+      Cerrar
+    </button>
+
+    <div class="max-w-5xl w-full">
+      <img
+        id="elegants-lightbox-img"
+        src=""
+        alt=""
+        class="max-h-[75vh] w-full object-contain rounded-2xl border border-zinc-800 bg-zinc-950"
+      />
+      <p
+        id="elegants-lightbox-caption"
+        class="mt-3 text-[11px] text-zinc-300 text-center"
+      ></p>
+    </div>
+  </div>
+
+  <script is:inline define:vars={{ screenshots }}>
+    const items = Array.from(
+      document.querySelectorAll("figure[data-index]"),
+    );
+    const lightbox = document.getElementById("elegants-lightbox");
+    const img = document.getElementById("elegants-lightbox-img");
+    const caption = document.getElementById("elegants-lightbox-caption");
+    const closeBtn = document.getElementById("elegants-lightbox-close");
+
+    if (items.length && lightbox && img && caption && closeBtn) {
+      items.forEach((figure) => {
+        figure.addEventListener("click", () => {
+          const index = Number(figure.dataset.index ?? 0);
+          const shot = screenshots[index];
+
+          img.src = shot.src;
+          img.alt = shot.alt;
+          caption.textContent = shot.caption ?? "";
+          lightbox.classList.remove("hidden");
+          lightbox.classList.add("flex");
+        });
+      });
+
+      const close = () => {
+        lightbox.classList.remove("flex");
+        lightbox.classList.add("hidden");
+      };
+
+      closeBtn.addEventListener("click", close);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) close();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") close();
+      });
+    }
+  </script>
+</div>

@@ -1,0 +1,106 @@
+---
+// src/pages/contact.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Contact · Pibadevs" description="Contacto y redes de Pibadevs">
+  <section class="grid gap-10 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start">
+    <!-- Columna texto principal -->
+    <div class="space-y-4">
+      <h1 class="text-2xl font-semibold text-zinc-50 sm:text-3xl">
+        Conectemos y hablemos de tu sistema
+      </h1>
+      <p class="text-sm text-zinc-400">
+        Si quieres dejar atrás procesos manuales, ordenar tu operación o explorar un sistema a medida,
+        puedes escribirnos directamente por estos canales. Leemos cada mensaje y respondemos con calma.
+      </p>
+      <p class="text-sm text-zinc-400">
+        No necesitas tener un requerimiento técnico detallado. Un breve contexto sobre tu empresa y el
+        problema que quieres resolver es suficiente para empezar la conversación.
+      </p>
+
+      <div class="mt-2 grid gap-3 sm:grid-cols-2">
+        <a
+          href="mailto:pibadevs@gmail.com"
+          class="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 hover:border-(--color-primary) transition-colors"
+        >
+          <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-(--color-primary)">
+            Email
+          </span>
+          <span class="text-sm text-zinc-100">pibadevs@gmail.com</span>
+          <span class="text-xs text-zinc-400">
+            Ideal para contarnos con más detalle el contexto de tu empresa y lo que necesitas.
+          </span>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/company/pibadevs"
+          target="_blank"
+          class="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 hover:border-(--color-primary) transition-colors"
+        >
+          <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-(--color-primary)">
+            LinkedIn
+          </span>
+          <span class="text-sm text-zinc-100">Pibadevs</span>
+          <span class="text-xs text-zinc-400">
+            Conecta a nivel profesional y revisa novedades, casos y contenido del estudio.
+          </span>
+        </a>
+
+        <a
+          href="https://www.instagram.com/pibadevs"
+          target="_blank"
+          class="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 hover:border-(--color-primary) transition-colors"
+        >
+          <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-(--color-primary)">
+            Instagram
+          </span>
+          <span class="text-sm text-zinc-100">@pibadevs</span>
+          <span class="text-xs text-zinc-400">
+            Un vistazo más visual a proyectos, procesos y al día a día detrás de Pibadevs.
+          </span>
+        </a>
+
+        <a
+          href="https://github.com/pibadevs?tab=repositories"
+          target="_blank"
+          class="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 hover:border-(--color-primary) transition-colors"
+        >
+          <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-(--color-primary)">
+            GitHub
+          </span>
+          <span class="text-sm text-zinc-100">@pibadevs</span>
+          <span class="text-xs text-zinc-400">
+            Repositorios públicos y ejemplos de la base técnica que usamos en nuestros proyectos.
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Columna info extra -->
+    <aside class="space-y-6 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-sm text-zinc-300">
+      <div>
+        <h2 class="text-sm font-semibold text-zinc-50">Qué solemos conversar primero</h2>
+        <ul class="mt-2 space-y-2 text-xs text-zinc-400">
+          <li>• Cómo estás gestionando hoy ventas, operaciones o reservas.</li>
+          <li>• Qué parte del proceso te consume más tiempo o genera más errores.</li>
+          <li>• Qué información te gustaría ver en un panel o reporte ideal.</li>
+        </ul>
+      </div>
+
+      <div class="border-t border-zinc-800 pt-3 text-xs text-zinc-400">
+        <p>
+          A partir de esa primera conversación podemos proponerte un primer alcance razonable, un
+          MVP o un módulo inicial que tenga impacto rápido sin intentar resolver todo de una vez.
+        </p>
+      </div>
+
+      <div class="border-t border-zinc-800 pt-3 text-xs text-zinc-400">
+        <p>
+          Zona horaria principal: Bogotá, Colombia (GMT-5). Si hace falta, coordinamos una breve
+          llamada para profundizar en tu contexto y definir los siguientes pasos.
+        </p>
+      </div>
+    </aside>
+  </section>
+</BaseLayout>

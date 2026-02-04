@@ -1,0 +1,110 @@
+---
+// src/pages/index.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const featuredProjects = [
+  {
+    title: "Sistema de gestión de reservas",
+    description:
+      "Aplicación web para administrar reservas, clientes y disponibilidad en tiempo real, reduciendo errores manuales y mensajes cruzados.",
+    tech: ["Django", "PostgreSQL", "Tailwind"],
+  },
+  {
+    title: "Panel interno para operaciones",
+    description:
+      "Herramienta interna para coordinar pedidos, inventario y estados de servicio en un solo lugar, con acceso por roles.",
+    tech: ["Django", "Astro", "PostgreSQL"],
+  },
+];
+---
+
+<BaseLayout
+  title="PibaDevs · Software a medida para PYMES"
+  description="Estudio de software que diseña y desarrolla sistemas web a medida para PYMES que quieren dejar atrás Excel y procesos manuales."
+>
+  <Hero
+    title="Llevamos tu operación más allá de Excel y WhatsApp."
+    subtitle="En PibaDevs diseñamos y desarrollamos sistemas web a medida para que tu empresa tenga procesos claros, datos confiables y herramientas que sí se usan en el día a día."
+    tagline="Estudio de desarrollo a medida"
+  />
+
+  <Section title="Qué hacemos" eyebrow="Servicios clave">
+    <div class="grid gap-4 md:grid-cols-3">
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 text-sm text-zinc-300">
+        <h3 class="mb-1 text-sm font-semibold text-zinc-50">Sistemas web para operación diaria</h3>
+        <p>
+          Construimos aplicaciones a medida para ventas, inventarios, reservas y atención a clientes,
+          alineadas con la forma real en que tu equipo trabaja.
+        </p>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 text-sm text-zinc-300">
+        <h3 class="mb-1 text-sm font-semibold text-zinc-50">Reemplazo de procesos manuales</h3>
+        <p>
+          Pasamos planillas, mensajes y notas sueltas a un sistema central donde todo queda
+          registrado, trazable y disponible para tu equipo.
+        </p>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 text-sm text-zinc-300">
+        <h3 class="mb-1 text-sm font-semibold text-zinc-50">Métricas y reportes claros</h3>
+        <p>
+          Diseñamos dashboards y reportes descargables con las métricas que realmente importan:
+          ventas, capacidad, tiempos de respuesta y más.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Por qué PibaDevs" eyebrow="Valor para tu empresa">
+    <div class="grid gap-4 md:grid-cols-3 text-sm text-zinc-300">
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4">
+        <h3 class="mb-1 text-sm font-semibold text-zinc-50">Software que encaja con tu proceso</h3>
+        <p>
+          No forzamos tu negocio a adaptarse a una plantilla genérica. Partimos de tus flujos y
+          diseñamos el sistema alrededor de ellos.
+        </p>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4">
+        <h3 class="mb-1 text-sm font-semibold text-zinc-50">Acompañamiento, no solo código</h3>
+        <p>
+          Hablamos de operación, costos y tiempos antes de escribir la primera línea. Te acompañamos
+          durante el lanzamiento y la adopción.
+        </p>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4">
+        <h3 class="mb-1 text-sm font-semibold text-zinc-50">Entrega incremental</h3>
+        <p>
+          Lanzamos versiones manejables, medimos su impacto y mejoramos el sistema con base en datos
+          y feedback de tu equipo.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  
+
+  <Section title="¿Hablamos de tu sistema?" eyebrow="Próximo paso">
+    <div class="flex flex-col gap-3 text-sm text-zinc-300 md:flex-row md:items-center md:justify-between">
+      <p>
+        Si tu equipo sigue dependiendo de Excel, chats y notas sueltas, es un buen momento para
+        pensar en un sistema propio. Podemos ayudarte a diseñarlo y ponerlo en marcha.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <a
+          href="/projects"
+          class="rounded-full border border-zinc-700 px-4 py-2 text-xs font-medium text-zinc-100 hover:border-(--color-primary) transition-colors"
+        >
+          Ver proyectos
+        </a>
+        <a
+          href="/contact"
+          class="rounded-full border border-zinc-700 px-4 py-2 text-xs font-medium text-white hover:border-(--color-primary) transition-colors"
+        >
+          Contáctanos
+        </a>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

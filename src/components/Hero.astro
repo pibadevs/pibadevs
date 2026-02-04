@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  tagline?: string;
+}
+
+const { title, subtitle, tagline } = Astro.props;
+---
+
+<section class="flex flex-col gap-8 py-10 sm:py-16">
+  <div class="max-w-xl space-y-4">
+    {
+      tagline && (
+        <p class="text-xs font-medium uppercase tracking-[0.2em] text-primary">
+          {tagline}
+        </p>
+      )
+    }
+    <h1
+      class="text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl lg:text-5xl"
+    >
+      {title}
+    </h1>
+    {subtitle && <p class="text-sm text-zinc-400 sm:text-base">{subtitle}</p>}
+    <div class="flex flex-wrap gap-3 pt-2">
+      <a
+        href="/projects"
+        class="rounded-full bg-(--color-primary) px-4 py-2 text-sm font-medium text-black hover:bg-(--color-tertiary) transition-colors"
+      >
+        Ver proyectos
+      </a>
+      <a
+        href="/projects"
+        class="rounded-full bg-(--color-primary) px-4 py-2 text-sm font-medium text-black hover:bg-(--color-tertiary) transition-colors"
+      >
+        Hablemos
+      </a>
+    </div>
+  </div>
+</section>

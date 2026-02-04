@@ -1,0 +1,58 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import Section from "../../components/Section.astro";
+import ElegantsGallery from "../../components/ElegantsGallery.astro";
+---
+
+<ProjectLayout
+  pageTitle="Elegants · Sistema de inventario y ventas"
+  pageDescription="Sistema de gestión de inventario y ventas desarrollado por Pibadevs para una tienda de ropa y accesorios."
+  heroTitle="Elegants · Sistema de inventario y ventas"
+  heroIntro="Elegants es un sistema de gestión de inventario y ventas diseñado para una tienda de ropa y accesorios que necesitaba tener control sobre productos, ventas, reservas y reportes sin depender de hojas de cálculo y notas sueltas."
+  heroBody="El sistema permite a administradores y vendedores trabajar sobre la misma información en tiempo real, con accesos por rol, métricas claras y trazabilidad de cada movimiento de inventario."
+  heroLeftBlocks={[
+    {
+      title: "Tipo de cliente",
+      body: "Tienda física de ropa y accesorios en crecimiento, con operación basada en Excel y registros manuales.",
+    },
+    {
+      title: "Objetivo principal",
+      body: "Tener un sistema único para controlar inventario, registrar ventas, manejar reservas y generar reportes sin depender de archivos dispersos.",
+    },
+  ]}
+  scopeTitle="Alcance del proyecto"
+  scopeItems={[
+    "Panel de control con métricas diarias, mensuales y alertas de stock.",
+    "Módulo de productos con estados de stock y búsqueda en tiempo real.",
+    "Registro de ventas con soporte para ventas a contado y a crédito.",
+    "Historial de movimientos de inventario (entradas y salidas).",
+    "Exportación de reportes a PDF y Excel.",
+    "Gestión de usuarios por rol (administrador y vendedor).",
+  ]}
+  scopeNote="PibaDevs acompañó al cliente desde el diseño de flujos hasta la capacitación del equipo y la puesta en producción del sistema."
+  featuresTitle="Funcionalidades principales"
+  features={[
+    {
+      title: "Dashboard",
+      body: "Tarjetas de resumen con ventas del día, ventas del mes, valor de inventario y alertas de bajo stock, además de gráficos de ganancias y categorías top.",
+    },
+    {
+      title: "Inventario",
+      body: "Listado de productos con imagen, categoría, estado de stock y filtros por nombre, código o descripción, pensado para responder rápido durante la venta.",
+    },
+    {
+      title: "Ventas y reservas",
+      body: "Flujo guiado para crear ventas al contado o a crédito, asociar clientes y registrar reservaciones que quedan visibles en el dashboard.",
+    },
+  ]}
+  tech={["Django", "Python", "PostgreSQL", "Tailwind CSS", "Chart.js"]}
+  ctaTitle="¿Te gustaría algo similar para tu negocio?"
+  ctaEyebrow="Próximo paso"
+  ctaBody="Si necesitas un sistema de inventario, ventas o panel de control adaptado a tu realidad, podemos reutilizar lo aprendido en Elegants y ajustarlo a tu operación."
+  ctaHref="/contact"
+  ctaLabel="Hablemos"
+>
+  <Section slot="gallery" title="Capturas de la aplicación" eyebrow="UI">
+    <ElegantsGallery client:load />
+  </Section>
+</ProjectLayout>
