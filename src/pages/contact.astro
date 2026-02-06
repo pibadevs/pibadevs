@@ -60,17 +60,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </a>
 
         <a
-  href="https://www.instagram.com/pibadevs/"
-  onclick="
-    const ua = navigator.userAgent;
-    if (/Android/i.test(ua)) {
-      window.location.href = 'intent://instagram.com/pibadevs#Intent;package=com.instagram.android;scheme=https;end';
-      return false;
-    }
-  "
-  class="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 hover:border-primary transition-colors"
->
-
+          href="/instagram"
+          class="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 hover:border-primary transition-colors"
+        >
           <span
             class="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary"
           >

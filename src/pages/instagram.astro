@@ -1,0 +1,30 @@
+---
+const username = "pibadevs";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abriendo Instagram…</title>
+
+    <!-- Fallback web -->
+    <meta http-equiv="refresh" content="3;url=https://www.instagram.com/pibadevs/" />
+  </head>
+
+  <body>
+    <p>Abriendo Instagram…</p>
+
+    <script>
+      const username = "pibadevs";
+
+      // Intentar abrir la app
+      window.location.href = `instagram://user?username=${username}`;
+
+      // Fallback fuerte
+      setTimeout(() => {
+        window.location.href = `https://www.instagram.com/${username}/`;
+      }, 2000);
+    </script>
+  </body>
+</html>
