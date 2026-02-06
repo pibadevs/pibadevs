@@ -60,9 +60,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </a>
 
         <a
-          href="https://instagram.com/_u/pibadevs"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="https://www.instagram.com/pibadevs/"
+          onclick="if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    window.location.href = 'instagram://user?username=pibadevs';
+    return false;
+  }"
           class="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 hover:border-primary transition-colors"
         >
           <span
