@@ -75,22 +75,33 @@ const services = [
   </Section>
 
   <Section title="Qué podemos construir contigo">
-    <div class="grid gap-4 md:grid-cols-2">
-      {services.map((service) => (
-        <article class="flex flex-col gap-2 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4 text-sm text-zinc-300">
-          <div>
-            <h2 class="text-sm font-semibold text-zinc-50">{service.title}</h2>
-            <p class="mt-1 text-xs text-zinc-400">{service.description}</p>
-          </div>
-          <ul class="mt-2 space-y-1 text-xs text-zinc-300">
-            {service.bullets.map((item) => (
-              <li>• {item}</li>
-            ))}
+  <div class="flex flex-col divide-y" style="border-color: var(--color-divider);">
+
+    {services.map((service, i) => (
+      <div class="grid md:grid-cols-[120px_1fr] gap-6 py-8 reveal">
+
+        <!-- número -->
+        <span class="text-sm font-semibold"
+              style="color: var(--color-primary);">
+          {String(i + 1).padStart(2, "0")}
+        </span>
+
+        <div>
+          <h2 class="text-lg font-semibold mb-2">{service.title}</h2>
+          <p class="text-base mb-3" style="color: var(--color-text-muted);">
+            {service.description}
+          </p>
+
+          <ul class="space-y-1 text-sm" style="color: var(--color-text-muted);">
+            {service.bullets.map(item => <li>— {item}</li>)}
           </ul>
-        </article>
-      ))}
-    </div>
-  </Section>
+        </div>
+
+      </div>
+    ))}
+
+  </div>
+</Section>
 
   <Section title="¿Es PibaDevs una buena opción para tu empresa?" eyebrow="Clientes ideales">
     <div class="grid gap-4 md:grid-cols-3 text-sm text-zinc-300">

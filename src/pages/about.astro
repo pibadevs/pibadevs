@@ -1,113 +1,91 @@
 ---
-// src/pages/about.astro
-import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
   title="About · PibaDevs"
-  description="Conoce cómo PibaDevs ayuda a PYMES y emprendedores a construir sistemas web a medida y sostenibles."
+  description="Cómo ayudamos a empresas a construir sistemas reales."
 >
+  <!-- INTRO -->
   <Section title="Quiénes somos" eyebrow="PibaDevs">
-    <div class="grid gap-6 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start">
-      <div class="space-y-3 text-sm text-zinc-300">
+    <div class="grid gap-10 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+
+      <div class="space-y-4 text-base reveal" style="color: var(--color-text-muted);">
         <p>
-          PibaDevs es un estudio de desarrollo de software a medida enfocado en pequeñas y medianas
-          empresas que quieren ordenar su operación, dejar atrás procesos manuales y dar un paso
-          sólido en su transformación digital.
+          PibaDevs es un estudio de desarrollo enfocado en empresas que necesitan
+          ordenar su operación y dejar atrás procesos manuales.
         </p>
         <p>
-          Antes de hablar de pantallas o tecnologías, dedicamos tiempo a entender cómo funciona tu
-          negocio hoy: qué herramientas usas, dónde se pierde tiempo y qué información necesitas para
-          decidir mejor.
+          Antes de hablar de tecnología, entendemos cómo funciona tu negocio:
+          dónde se pierde tiempo, qué información falta y qué necesitas mejorar.
         </p>
         <p>
-          A partir de ahí diseñamos sistemas web y herramientas internas que se integran con tu
-          operación diaria, sin añadir complejidad innecesaria.
+          A partir de ahí diseñamos sistemas simples, claros y útiles en el día a día.
         </p>
       </div>
 
-      <div class="space-y-3 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4 text-sm">
-        <h2 class="text-sm font-semibold text-zinc-50">En qué creemos</h2>
-        <ul class="mt-2 space-y-2 text-xs text-zinc-300">
-          <li>• El software debe ayudar al negocio, no al revés.</li>
-          <li>• Los usuarios finales necesitan claridad, no más pantallas.</li>
-          <li>• Un sistema útil se construye escuchando a quienes lo van a usar.</li>
-          <li>• Es mejor lanzar algo pequeño que funcione que un proyecto enorme que nunca llega.</li>
+      <!-- CREENCIAS -->
+      <div class="space-y-4 reveal">
+        <h3 class="text-sm font-semibold">En qué creemos</h3>
+
+        <ul class="space-y-3 text-sm" style="color: var(--color-text-muted);">
+          <li>El software debe adaptarse al negocio.</li>
+          <li>Menos pantallas, más claridad.</li>
+          <li>Escuchar usuarios es clave.</li>
+          <li>Lanzar rápido > construir perfecto.</li>
         </ul>
       </div>
+
     </div>
   </Section>
 
-  <Section title="Misión y visión">
-    <div class="grid gap-4 md:grid-cols-2 text-sm text-zinc-300">
-      <article class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h2 class="mb-1 text-sm font-semibold text-zinc-50">Misión</h2>
-        <p>
-          Diseñar y desarrollar soluciones de software a medida que ayuden a las empresas a optimizar
-          procesos, tomar mejores decisiones y crecer de forma sostenible.
-        </p>
-      </article>
-      <article class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h2 class="mb-1 text-sm font-semibold text-zinc-50">Visión</h2>
-        <p>
-          Ser un estudio de software reconocido en Latinoamérica por construir sistemas robustos,
-          claros y escalables que resuelvan problemas reales de negocio.
-        </p>
-      </article>
-    </div>
-  </Section>
-
+  <!-- PROCESO -->
   <Section title="Cómo trabajamos" eyebrow="Proceso">
-    <div class="grid gap-4 md:grid-cols-5 text-xs text-zinc-300">
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h3 class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-400">
-          01 · Descubrimiento
-        </h3>
-        <p>Entendemos tu operación actual, cuellos de botella y objetivos de negocio.</p>
-      </div>
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h3 class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-400">
-          02 · Diseño de solución
-        </h3>
-        <p>Definimos flujos, módulos y prioridades en un roadmap claro y alcanzable.</p>
-      </div>
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h3 class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-400">
-          03 · Desarrollo iterativo
-        </h3>
-        <p>Construimos en ciclos cortos, con demos frecuentes para validar con tu equipo.</p>
-      </div>
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h3 class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-400">
-          04 · Lanzamiento
-        </h3>
-        <p>Acompañamos el despliegue, capacitación y ajustes finos según el uso real.</p>
-      </div>
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h3 class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-400">
-          05 · Mejora continua
-        </h3>
-        <p>Tomamos métricas y feedback para evolucionar el sistema sin romper lo que ya funciona.</p>
-      </div>
+    <div class="flex flex-col divide-y" style="border-color: var(--color-divider);">
+
+      {[
+        ["01", "Descubrimiento", "Entendemos tu operación y detectamos cuellos de botella."],
+        ["02", "Diseño", "Definimos flujos, módulos y prioridades claras."],
+        ["03", "Desarrollo", "Construimos en ciclos cortos con validación constante."],
+        ["04", "Lanzamiento", "Implementamos y ajustamos según uso real."],
+        ["05", "Evolución", "Mejoramos el sistema con datos y feedback."]
+      ].map(([n, title, desc]) => (
+        <div class="grid grid-cols-[52px_1fr_auto] gap-4 py-6 reveal">
+          <span style="color: var(--color-primary);" class="font-semibold">{n}</span>
+
+          <div>
+            <h3 class="font-semibold">{title}</h3>
+            <p class="text-base" style="color: var(--color-text-muted);">{desc}</p>
+          </div>
+
+          <span style="color: var(--color-text-faint);">→</span>
+        </div>
+      ))}
+
     </div>
   </Section>
 
-  <Section title="Tecnologías que usamos">
-    <div class="grid gap-4 md:grid-cols-3 text-sm text-zinc-300">
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h3 class="mb-1 text-sm font-semibold text-zinc-50">Backend</h3>
-        <p>Django y Python para construir APIs sólidas y lógicas de negocio claras.</p>
-        <p class="mt-2 text-xs text-zinc-400">Bases de datos: PostgreSQL, SQLite, Firebase.</p>
+  <!-- MISIÓN -->
+  <Section title="Misión y visión">
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <div class="p-6 rounded-xl border reveal"
+           style="border-color: var(--color-border); background: var(--color-surface);">
+        <h3 class="font-semibold mb-2">Misión</h3>
+        <p style="color: var(--color-text-muted);">
+          Crear software que mejore procesos, decisiones y crecimiento.
+        </p>
       </div>
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h3 class="mb-1 text-sm font-semibold text-zinc-50">Frontend</h3>
-        <p>Interfaces en HTML, Tailwind CSS y JavaScript; usamos React cuando tiene sentido.</p>
+
+      <div class="p-6 rounded-xl border reveal"
+           style="border-color: var(--color-border); background: var(--color-surface);">
+        <h3 class="font-semibold mb-2">Visión</h3>
+        <p style="color: var(--color-text-muted);">
+          Ser referencia en LATAM en sistemas claros, útiles y escalables.
+        </p>
       </div>
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h3 class="mb-1 text-sm font-semibold text-zinc-50">Infraestructura</h3>
-        <p>Despliegues en VPS, AWS y nubes públicas según las necesidades del proyecto.</p>
-      </div>
+
     </div>
   </Section>
 </BaseLayout>

@@ -3,92 +3,148 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Contact · Pibadevs" description="Contacto y redes de Pibadevs">
+<BaseLayout title="Contacto · Pibadevs" description="Hablemos de tu sistema y cómo podemos ayudarte.">
   <section class="grid gap-10 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start">
-    <!-- Columna texto principal -->
-    <div class="space-y-4">
-      <h1 class="text-2xl font-semibold text-zinc-50 sm:text-3xl">
-        Conectemos y hablemos de tu sistema
+
+    <!-- IZQUIERDA -->
+    <div class="space-y-5">
+      
+      <h1 class="text-3xl font-semibold text-zinc-50 leading-tight">
+        Hablemos de tu sistema
       </h1>
-      <p class="text-sm text-zinc-400">
-        Si quieres dejar atrás procesos manuales, ordenar tu operación o explorar un sistema a medida,
-        puedes escribirnos directamente por estos canales. Leemos cada mensaje y respondemos con calma.
-      </p>
-      <p class="text-sm text-zinc-400">
-        No necesitas tener un requerimiento técnico detallado. Un breve contexto sobre tu empresa y el
-        problema que quieres resolver es suficiente para empezar la conversación.
+
+      <p class="text-sm text-zinc-400 max-w-xl">
+        Si estás cansado de manejar tu negocio con Excel, notas sueltas o procesos manuales,
+        podemos ayudarte a organizar todo en un sistema claro y usable.
       </p>
 
-      <div class="mt-2 grid gap-3 sm:grid-cols-2 ">
+      <p class="text-sm text-zinc-400 max-w-xl">
+        No necesitas tener todo definido. Con entender tu operación actual y el problema
+        principal es suficiente para empezar.
+      </p>
+
+      <!-- CONTACT CARDS -->
+      <div class="grid gap-4 sm:grid-cols-2 mt-4">
+
+        <!-- EMAIL -->
         <a
           href="mailto:pibadevs@gmail.com"
-          class="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 hover:border-primary transition-colors"
+          class="group flex flex-col gap-2 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-5 transition-all duration-200 hover:border-primary hover:bg-zinc-900"
         >
-          <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+          <span class="text-[11px] uppercase tracking-[0.18em] text-primary font-semibold">
             Email
           </span>
-          <span class="text-sm text-zinc-100">pibadevs@gmail.com</span>
+
+          <span class="text-sm text-zinc-100 font-medium">
+            pibadevs@gmail.com
+          </span>
+
           <span class="text-xs text-zinc-400">
-            Ideal para contarnos con más detalle el contexto de tu empresa y lo que necesitas.
+            Cuéntanos tu caso con más detalle. Es el mejor canal para empezar.
           </span>
         </a>
 
+        <!-- LINKEDIN -->
         <a
           href="#"
-          
-          class="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 hover:border-primary transition-colors"
+          class="group flex flex-col gap-2 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-5 transition-all duration-200 hover:border-primary hover:bg-zinc-900"
         >
-          <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+          <span class="text-[11px] uppercase tracking-[0.18em] text-primary font-semibold">
             LinkedIn
           </span>
-          <span class="text-sm text-zinc-100">Pibadevs</span>
+
+          <span class="text-sm text-zinc-100 font-medium">
+            Pibadevs
+          </span>
+
           <span class="text-xs text-zinc-400">
-            Conecta a nivel profesional y revisa novedades, casos y contenido del estudio.
+            Conecta con nosotros y revisa proyectos y contenido.
           </span>
         </a>
-
         
 
+        <!-- GITHUB -->
         <a
           href="https://github.com/pibadevs?tab=repositories"
           target="_blank"
-          class="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 hover:border-primary transition-colors"
+          class="group flex flex-col gap-2 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-5 transition-all duration-200 hover:border-primary hover:bg-zinc-900 sm:col-span-2"
         >
-          <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+          <span class="text-[11px] uppercase tracking-[0.18em] text-primary font-semibold">
             GitHub
           </span>
-          <span class="text-sm text-zinc-100">@pibadevs</span>
+
+          <span class="text-sm text-zinc-100 font-medium">
+            @pibadevs
+          </span>
+
           <span class="text-xs text-zinc-400">
-            Repositorios públicos y ejemplos de la base técnica que usamos en nuestros proyectos.
+            Código real, estructuras y base técnica de nuestros sistemas.
+          </span>
+        </a>
+        <!-- INSTAGRAM -->
+        <a
+          href="https://www.instagram.com/pibadevs"
+          target="_blank"
+          class="group flex flex-col gap-2 rounded-2xl border border-zinc-800 bg-zinc-900/70 p-5 transition-all duration-200 hover:border-primary hover:bg-zinc-900 sm:col-span-2"
+        >
+          <span class="text-[11px] uppercase tracking-[0.18em] text-primary font-semibold">
+            Instagram
+          </span>
+
+          <span class="text-sm text-zinc-100 font-medium">
+            @pibadevs
+          </span>
+
+          <span class="text-xs text-zinc-400">
+            Conecta con nosotros y revisa proyectos y contenido.
           </span>
         </a>
       </div>
     </div>
 
-    <!-- Columna info extra -->
-    <aside class="mt-auto space-y-4 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-sm text-zinc-300 hover:border-primary transition-colors">
+    <!-- DERECHA -->
+    <aside class="space-y-5 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 text-sm text-zinc-300 transition-colors hover:border-primary">
+
+      <!-- BLOQUE 1 -->
       <div>
-        <h2 class="text-sm font-semibold text-zinc-50">Qué solemos conversar primero</h2>
-        <ul class="mt-2 space-y-2 text-xs text-zinc-400">
-          <li>• Cómo estás gestionando hoy ventas, operaciones o reservas.</li>
-          <li>• Qué parte del proceso te consume más tiempo o genera más errores.</li>
-          <li>• Qué información te gustaría ver en un panel o reporte ideal.</li>
+        <h2 class="text-sm font-semibold text-zinc-50">
+          Cómo empezamos normalmente
+        </h2>
+
+        <ul class="mt-3 space-y-2 text-xs text-zinc-400 leading-relaxed">
+          <li>• Cómo gestionas hoy ventas, inventario o reservas.</li>
+          <li>• Qué parte del proceso te hace perder más tiempo.</li>
+          <li>• Qué te gustaría ver en un panel ideal.</li>
         </ul>
       </div>
 
-      <div class="border-t border-zinc-800 pt-3 text-xs text-zinc-400">
+      <!-- BLOQUE 2 -->
+      <div class="border-t border-zinc-800 pt-4 text-xs text-zinc-400 leading-relaxed">
         <p>
-          A partir de esa primera conversación podemos proponerte un primer alcance razonable, un
-          MVP o un módulo inicial que tenga impacto rápido sin intentar resolver todo de una vez.
+          A partir de eso, proponemos un alcance inicial enfocado en impacto rápido:
+          un MVP o módulo clave antes de construir algo más grande.
         </p>
       </div>
 
-      <div class="border-t border-zinc-800 pt-3 text-xs text-zinc-400">
+      <!-- BLOQUE 3 -->
+      <div class="border-t border-zinc-800 pt-4 text-xs text-zinc-400 leading-relaxed">
         <p>
-          Zona horaria principal: Bogotá, Colombia (GMT-5). Si hace falta, coordinamos una breve
-          llamada para profundizar en tu contexto y definir los siguientes pasos.
+          Zona horaria: Bogotá (GMT-5). Si hace falta, coordinamos una llamada corta
+          para aterrizar tu caso y definir siguientes pasos.
         </p>
       </div>
+
+      <!-- MINI CTA -->
+      <div class="border-t border-zinc-800 pt-4">
+        <a
+          href="mailto:pibadevs@gmail.com"
+          class="inline-block rounded-full bg-primary px-4 py-2 text-xs font-medium text-white transition hover:opacity-90"
+        >
+          Escribir ahora →
+        </a>
+      </div>
+
     </aside>
+
   </section>
 </BaseLayout>

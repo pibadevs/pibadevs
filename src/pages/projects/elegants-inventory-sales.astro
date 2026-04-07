@@ -5,54 +5,61 @@ import ElegantsGallery from "../../components/ElegantsGallery.astro";
 ---
 
 <ProjectLayout
-  pageTitle="Elegants · Sistema de inventario y ventas"
-  pageDescription="Sistema de gestión de inventario y ventas desarrollado por Pibadevs para una tienda de ropa y accesorios."
-  heroTitle="Elegants · Sistema de inventario y ventas"
-  heroIntro="Elegants es un sistema de gestión de inventario y ventas diseñado para una tienda de ropa y accesorios que necesitaba tener control sobre productos, ventas, reservas y reportes sin depender de hojas de cálculo y notas sueltas."
-  heroBody="El sistema permite a administradores y vendedores trabajar sobre la misma información en tiempo real, con accesos por rol, métricas claras y trazabilidad de cada movimiento de inventario."
+  pageTitle="Elegants · Sistema de inventario"
+  pageDescription="Sistema de inventario y ventas desarrollado por Pibadevs."
+  
+  heroTitle="Elegants · Sistema de inventario"
+  heroIntro="Sistema web que reemplazó Excel para controlar inventario, ventas y reservas en tiempo real."
+  heroBody="Diseñado para una tienda en crecimiento, el sistema centraliza toda la operación en un solo lugar, con accesos por rol, métricas claras y trazabilidad completa."
+
   heroLeftBlocks={[
     {
       title: "Tipo de cliente",
-      body: "Tienda física de ropa y accesorios en crecimiento, con operación basada en Excel y registros manuales.",
+      body: "Tienda física en crecimiento con operación basada en Excel y procesos manuales.",
     },
     {
-      title: "Objetivo principal",
-      body: "Tener un sistema único para controlar inventario, registrar ventas, manejar reservas y generar reportes sin depender de archivos dispersos.",
+      title: "Objetivo",
+      body: "Centralizar inventario, ventas y reportes en un sistema único, claro y usable.",
     },
   ]}
+
   scopeTitle="Alcance del proyecto"
   scopeItems={[
-    "Panel de control con métricas diarias, mensuales y alertas de stock.",
-    "Módulo de productos con estados de stock y búsqueda en tiempo real.",
-    "Registro de ventas con soporte para ventas a contado y a crédito.",
-    "Historial de movimientos de inventario (entradas y salidas).",
-    "Exportación de reportes a PDF y Excel.",
-    "Gestión de usuarios por rol (administrador y vendedor).",
+    "Dashboard con métricas y alertas en tiempo real",
+    "Gestión de productos con búsqueda instantánea",
+    "Registro de ventas (contado y crédito)",
+    "Historial completo de movimientos de inventario",
+    "Reportes exportables en PDF y Excel",
+    "Sistema de usuarios con roles definidos",
   ]}
-  scopeNote="PibaDevs acompañó al cliente desde el diseño de flujos hasta la capacitación del equipo y la puesta en producción del sistema."
+  scopeNote="Desde el diseño de flujos hasta la implementación y adopción por parte del equipo."
+
   featuresTitle="Funcionalidades principales"
   features={[
     {
       title: "Dashboard",
-      body: "Tarjetas de resumen con ventas del día, ventas del mes, valor de inventario y alertas de bajo stock, además de gráficos de ganancias y categorías top.",
+      body: "Visualización clara de ventas, inventario y alertas clave para tomar decisiones rápidas.",
     },
     {
       title: "Inventario",
-      body: "Listado de productos con imagen, categoría, estado de stock y filtros por nombre, código o descripción, pensado para responder rápido durante la venta.",
+      body: "Gestión de productos con filtros rápidos y estado de stock en tiempo real.",
     },
     {
-      title: "Ventas y reservas",
-      body: "Flujo guiado para crear ventas al contado o a crédito, asociar clientes y registrar reservaciones que quedan visibles en el dashboard.",
+      title: "Ventas",
+      body: "Flujo simple para registrar ventas y reservas sin fricción para el equipo.",
     },
   ]}
+
   tech={["Django", "Python", "PostgreSQL", "Tailwind CSS", "Chart.js"]}
-  ctaTitle="¿Te gustaría algo similar para tu negocio?"
+
+  ctaTitle="¿Quieres un sistema así en tu empresa?"
   ctaEyebrow="Próximo paso"
-  ctaBody="Si necesitas un sistema de inventario, ventas o panel de control adaptado a tu realidad, podemos reutilizar lo aprendido en Elegants y ajustarlo a tu operación."
+  ctaBody="Podemos diseñar una solución similar adaptada a tu operación y necesidades reales."
   ctaHref="/contact"
   ctaLabel="Hablemos"
 >
-  <Section slot="gallery" title="Capturas de la aplicación" eyebrow="UI">
+  <!-- GALERÍA -->
+  <Section slot="gallery" title="Capturas del sistema" eyebrow="Producto">
     <ElegantsGallery client:load />
   </Section>
 </ProjectLayout>

@@ -1,130 +1,126 @@
 ---
-// src/pages/index.astro
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
-import ProjectCard from "../components/ProjectCard.astro";
-
-const featuredProjects = [
-  {
-    title: "Sistema de gestión de reservas",
-    description:
-      "Aplicación web para administrar reservas, clientes y disponibilidad en tiempo real, reduciendo errores manuales y mensajes cruzados.",
-    tech: ["Django", "PostgreSQL", "Tailwind"],
-  },
-  {
-    title: "Panel interno para operaciones",
-    description:
-      "Herramienta interna para coordinar pedidos, inventario y estados de servicio en un solo lugar, con acceso por roles.",
-    tech: ["Django", "Astro", "PostgreSQL"],
-  },
-];
 ---
 
 <BaseLayout
   title="PibaDevs · Software a medida para PYMES"
-  description="Estudio de software que diseña y desarrolla sistemas web a medida para PYMES que quieren dejar atrás Excel y procesos manuales."
+  description="Diseñamos sistemas web que reemplazan Excel, chats y procesos manuales."
 >
+  <!-- HERO -->
   <Hero
     title="Llevamos tu operación más allá."
-    subtitle="En PibaDevs diseñamos y desarrollamos sistemas web a medida para que tu empresa tenga procesos claros, datos confiables y herramientas que sí se usan en el día a día."
+    subtitle="Diseñamos sistemas web a medida para que tu empresa deje atrás Excel, tenga datos confiables y procesos que realmente funcionen."
     tagline="Estudio de desarrollo a medida"
   />
 
+  <!-- SERVICIOS -->
   <Section title="Qué hacemos" eyebrow="Servicios clave">
-    <div class="grid gap-4 md:grid-cols-3">
-      <div
-        class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 text-sm text-zinc-300"
-      >
-        <h3 class="mb-1 text-sm font-semibold text-zinc-50">
-          Sistemas web para operación diaria
-        </h3>
-        <p>
-          Construimos aplicaciones a medida para ventas, inventarios, reservas y
-          atención a clientes, alineadas con la forma real en que tu equipo
-          trabaja.
-        </p>
+    <div class="flex flex-col divide-y" style="border-color: var(--color-divider);">
+      
+      <!-- ITEM -->
+      <div class="grid grid-cols-[52px_1fr_auto] gap-4 py-6 reveal">
+        <span class="text-sm font-semibold" style="color: var(--color-primary);">01</span>
+        
+        <div>
+          <h3 class="text-base font-semibold mb-1">Sistemas web para operación diaria</h3>
+          <p class="text-base" style="color: var(--color-text-muted);">
+            Aplicaciones a medida para ventas, inventarios, reservas y atención al cliente, alineadas a cómo trabaja tu equipo.
+          </p>
+        </div>
+
+        <span class="text-xs" style="color: var(--color-text-faint);">→</span>
       </div>
-      <div
-        class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 text-sm text-zinc-300"
-      >
-        <h3 class="mb-1 text-sm font-semibold text-zinc-50">
-          Reemplazo de procesos manuales
-        </h3>
-        <p>
-          Pasamos planillas, mensajes y notas sueltas a un sistema central donde
-          todo queda registrado, trazable y disponible para tu equipo.
-        </p>
+
+      <!-- ITEM -->
+      <div class="grid grid-cols-[52px_1fr_auto] gap-4 py-6 reveal">
+        <span class="text-sm font-semibold" style="color: var(--color-primary);">02</span>
+        
+        <div>
+          <h3 class="text-base font-semibold mb-1">Automatización de procesos</h3>
+          <p class="text-base" style="color: var(--color-text-muted);">
+            Eliminamos Excel, chats y notas sueltas con sistemas centralizados, trazables y accesibles para todo tu equipo.
+          </p>
+        </div>
+
+        <span class="text-xs" style="color: var(--color-text-faint);">→</span>
       </div>
-      <div
-        class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 text-sm text-zinc-300"
-      >
-        <h3 class="mb-1 text-sm font-semibold text-zinc-50">
-          Métricas y reportes claros
-        </h3>
-        <p>
-          Diseñamos dashboards y reportes descargables con las métricas que
-          realmente importan: ventas, capacidad, tiempos de respuesta y más.
-        </p>
+
+      <!-- ITEM -->
+      <div class="grid grid-cols-[52px_1fr_auto] gap-4 py-6 reveal">
+        <span class="text-sm font-semibold" style="color: var(--color-primary);">03</span>
+        
+        <div>
+          <h3 class="text-base font-semibold mb-1">Métricas y decisiones claras</h3>
+          <p class="text-base" style="color: var(--color-text-muted);">
+            Dashboards y reportes con las métricas que realmente importan: ventas, tiempos, capacidad y rendimiento.
+          </p>
+        </div>
+
+        <span class="text-xs" style="color: var(--color-text-faint);">→</span>
       </div>
+
     </div>
   </Section>
 
-  <Section title="Por qué PibaDevs" eyebrow="Valor para tu empresa">
-    <div class="grid gap-4 md:grid-cols-3 text-sm text-zinc-300">
-      <div class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h3 class="mb-1 text-sm font-semibold text-zinc-50">
-          Software que encaja con tu proceso
-        </h3>
-        <p>
-          No forzamos tu negocio a adaptarse a una plantilla genérica. Partimos
-          de tus flujos y diseñamos el sistema alrededor de ellos.
+  <!-- VALOR -->
+  <Section title="Por qué PibaDevs" eyebrow="Valor real">
+    <div class="grid gap-6 md:grid-cols-3">
+
+      <div class="p-5 rounded-xl border reveal transition"
+           style="border-color: var(--color-border); background: var(--color-surface);">
+        <h3 class="font-semibold mb-2">Encaja con tu negocio</h3>
+        <p class="text-base" style="color: var(--color-text-muted);">
+          Diseñamos el sistema alrededor de tu operación real, no al revés.
         </p>
       </div>
-      <div class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h3 class="mb-1 text-sm font-semibold text-zinc-50">
-          Acompañamiento, no solo código
-        </h3>
-        <p>
-          Hablamos de operación, costos y tiempos antes de escribir la primera
-          línea. Te acompañamos durante el lanzamiento y la adopción.
+
+      <div class="p-5 rounded-xl border reveal transition"
+           style="border-color: var(--color-border); background: var(--color-surface);">
+        <h3 class="font-semibold mb-2">Acompañamiento completo</h3>
+        <p class="text-base" style="color: var(--color-text-muted);">
+          Te guiamos desde la idea hasta la implementación y adopción.
         </p>
       </div>
-      <div class="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4">
-        <h3 class="mb-1 text-sm font-semibold text-zinc-50">
-          Entrega incremental
-        </h3>
-        <p>
-          Lanzamos versiones manejables, medimos su impacto y mejoramos el
-          sistema con base en datos y feedback de tu equipo.
+
+      <div class="p-5 rounded-xl border reveal transition"
+           style="border-color: var(--color-border); background: var(--color-surface);">
+        <h3 class="font-semibold mb-2">Evolución constante</h3>
+        <p class="text-base" style="color: var(--color-text-muted);">
+          Mejoramos el sistema con base en datos y feedback real de uso.
         </p>
       </div>
+
     </div>
   </Section>
 
-  <Section title="¿Hablamos de tu sistema?" eyebrow="Próximo paso">
-    <div
-      class="flex flex-col gap-3 text-sm text-zinc-300 md:flex-row md:items-center md:justify-between"
-    >
-      <p>
-        Si tu equipo sigue dependiendo de Excel, chats y notas sueltas, es un
-        buen momento para pensar en un sistema propio. Podemos ayudarte a
-        diseñarlo y ponerlo en marcha.
+  <!-- CTA -->
+  <Section title="¿Listo para mejorar tu operación?" eyebrow="Siguiente paso">
+    <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between reveal">
+      
+      <p class="text-base max-w-xl" style="color: var(--color-text-muted);">
+        Si tu empresa aún depende de Excel y procesos manuales, podemos ayudarte a construir un sistema propio que escale contigo.
       </p>
-      <div class="flex flex-wrap gap-2">
+
+      <div class="flex gap-3">
         <a
           href="/projects"
-          class="rounded-full border border-zinc-700 px-4 py-2 text-xs font-medium text-white hover:border-primary transition-colors"
+          class="px-5 py-2 rounded-full text-sm font-medium transition"
+          style="background: var(--color-primary); color: white;"
         >
-          Ver proyecto
+          Ver proyectos
         </a>
+
         <a
           href="/contact"
-          class="rounded-full border border-zinc-700 px-4 py-2 text-xs font-medium text-white hover:border-primary transition-colors"
+          class="px-5 py-2 rounded-full text-sm font-medium border transition"
+          style="border-color: var(--color-border);"
         >
-          Contáctanos
+          Hablemos
         </a>
       </div>
+
     </div>
   </Section>
 </BaseLayout>
